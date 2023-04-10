@@ -1,18 +1,11 @@
 
 '''
-Enunciado: se publica una nueva regulación térmica del edificio e impone protecciones externas en las ventanas, con el fin de aumentar el aislamiento de las casas residenciales. Su código ahora debe detenerse si alguna vez se crea una instancia de una ventana sin protección externa (para eso, use el comando raise Exception("mensaje"); este mecanismo se explicará en la sección dedicada a las excepciones). En el contexto de este ejercicio, la protección se limitará a una cadena de caracteres ("Persiana", "Estor", etc.).
-
-Comportamiento esperado:
-
-ventana_norte = Ventana(pared_norte, 0.5) 
->>> TypeError: __init__() missing 1 required positional argument:
-'proteccion'
-ventana_norte = Ventana(pared_norte, 0.5, None) 
->>> Exception: Protección obligatoria 
-ventana_norte = Ventana(pared_norte, 0.5, "Persiana") 
-[...] 
-print(casa.superficie_acristalada()) 
->>> 4.5
+Enunciado: se publica una nueva regulación térmica del edificio e impone protecciones externas en las 
+ventanas, con el fin de aumentar el aislamiento de las casas residenciales. Su código ahora debe detenerse 
+si alguna vez se crea una instancia de una ventana sin protección externa (para eso, use el comando raise 
+Exception("mensaje"); este mecanismo se explicará en la sección dedicada a las excepciones). En el 
+contexto de este ejercicio, la protección se limitará a una cadena de caracteres ("Persiana", "Estor", 
+etc.).
 '''
 from enum import Enum
 class Orientacion(Enum):
