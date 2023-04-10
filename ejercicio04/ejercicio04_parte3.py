@@ -48,6 +48,14 @@ class Ventana:
             raise Exception('Protección obligatoria')
         self.superficie = superficie
 
+class ParedCortina(Pared, Ventana):
+    def __init__(self, orientacion, superficie):
+        Pared.__init__(self, orientacion) #(self, orientacion)
+        Ventana.__init__(self, self, superficie) #(self, pared, superficie) la pared es la misma que la de la clase padre
+
+    def __str__(self):
+        return 'Pared cortina: ' + self.orientacion
+
 class Casa:
     def __init__(self, paredes):
         if isinstance(paredes, list):
