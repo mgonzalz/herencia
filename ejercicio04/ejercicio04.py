@@ -38,7 +38,7 @@ class Casa:
         if isinstance(paredes, list):
             self.paredes = paredes
         else:
-            raise Exception('Protección obligatoria')
+            raise Exception('Una casa debe tener paredes')
 
     def superficie_acristalada(self):
         superficie = 0
